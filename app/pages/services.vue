@@ -30,7 +30,7 @@
                   color="white"
                 ></v-icon>
               </v-avatar>
-              <v-card-title class="text-h5 font-weight-bold pa-0">
+              <v-card-title class="text-h5 font-weight-bold pa-0 text-wrap">
                WooCommerce Store Design
               </v-card-title>
             </div>
@@ -47,7 +47,7 @@
                     class="mr-3"
                   ></v-icon>
                 </template>
-                <v-list-item-title class="text-body-1">
+                <v-list-item-title class="text-body-1 text-wrap">
                   {{ feature }}
                 </v-list-item-title>
               </v-list-item>
@@ -77,7 +77,7 @@
                   color="white"
                 ></v-icon>
               </v-avatar>
-              <v-card-title class="text-h5 font-weight-bold pa-0">
+              <v-card-title class="text-h5 font-weight-bold pa-0 text-wrap">
                 Facebook Ads & Marketing
               </v-card-title>
             </div>
@@ -94,7 +94,7 @@
                     class="mr-3"
                   ></v-icon>
                 </template>
-                <v-list-item-title class="text-body-1">
+                <v-list-item-title class="text-body-1 text-wrap">
                   {{ feature }}
                 </v-list-item-title>
               </v-list-item>
@@ -125,7 +125,7 @@
                   color="white"
                 ></v-icon>
               </v-avatar>
-              <v-card-title class="text-h5 font-weight-bold pa-0">
+              <v-card-title class="text-h5 font-weight-bold pa-0 text-wrap">
                 Portfolio Website Design for Everyone
               </v-card-title>
             </div>
@@ -145,7 +145,7 @@
                     class="mr-3"
                   ></v-icon>
                 </template>
-                <v-list-item-title class="text-body-1">
+                <v-list-item-title class="text-body-1 text-wrap">
                   {{ feature }}
                 </v-list-item-title>
               </v-list-item>

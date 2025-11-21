@@ -29,10 +29,10 @@
                 ></v-icon>
               </v-avatar>
             </template>
-            <v-card-title class="text-h5 font-weight-bold mb-3">
+            <v-card-title class="text-h5 font-weight-bold mb-3 text-wrap">
               WooCommerce Store Design
             </v-card-title>
-            <v-card-text class="text-body-1 text-medium-emphasis text-justify">
+            <v-card-text class="text-body-1 text-medium-emphasis">
               We build modern, fast, and mobile-friendly online stores. A good design helps customers trust you and makes your products look great.
             </v-card-text>
           </v-card-item>
@@ -60,10 +60,10 @@
                 ></v-icon>
               </v-avatar>
             </template>
-            <v-card-title class="text-h5 font-weight-bold mb-3">
+            <v-card-title class="text-h5 font-weight-bold mb-3 text-wrap">
               Facebook Ads & Marketing
             </v-card-title>
-            <v-card-text class="text-body-1 text-medium-emphasis text-justify">
+            <v-card-text class="text-body-1 text-medium-emphasis">
               A beautiful store needs customers. We use targeted Facebook Ads to find the right people for your products and bring them to your website.
             </v-card-text>
           </v-card-item>
@@ -91,10 +91,10 @@
                 ></v-icon>
               </v-avatar>
             </template>
-            <v-card-title class="text-h5 font-weight-bold mb-3">
+            <v-card-title class="text-h5 font-weight-bold mb-3 text-wrap">
               Portfolio Website for Everyone
             </v-card-title>
-            <v-card-text class="text-body-1 text-medium-emphasis text-justify">
+            <v-card-text class="text-body-1 text-medium-emphasis">
               We create stunning, professional portfolio websites for individuals and businesses to showcase their work and skills effectively.
             </v-card-text>
           </v-card-item>
