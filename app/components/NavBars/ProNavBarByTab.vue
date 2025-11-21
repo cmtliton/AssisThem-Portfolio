@@ -193,11 +193,12 @@
       created_by: '',
       updated_by: '',
     },
+    
     {
       id: 3,
-      name: 'about-us',
-      title: 'About Us',
-      url: '/about',
+      name: 'portfolio',
+      title: 'Portfolio',
+      url: '/portfolio',
       description: '',
       src: 'mdi-account-outline',
       created_at: '',
@@ -207,9 +208,9 @@
     },
     {
       id: 4,
-      name: 'portfolio',
-      title: 'Portfolio',
-      url: '/portfolio',
+      name: 'about-us',
+      title: 'About Us',
+      url: '/about',
       description: '',
       src: 'mdi-account-outline',
       created_at: '',

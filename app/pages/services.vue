@@ -30,7 +30,7 @@
                   color="white"
                 ></v-icon>
               </v-avatar>
-              <v-card-title class="text-h5 font-weight-bold pa-0 text-wrap">
+              <v-card-title class="text-h5 text-xs-subtitle-1 font-weight-bold pa-0 text-wrap">
                WooCommerce Store Design
               </v-card-title>
             </div>
@@ -65,7 +65,7 @@
           height="100%"
         >
           <v-card-item class="pa-6">
-            <div class="d-flex align-center mb-4">
+            <div class="d-flex align-center mb-4 text-wrap">
               <v-avatar
                 color="primary"
                 size="64"
