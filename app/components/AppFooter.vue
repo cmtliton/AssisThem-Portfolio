@@ -114,7 +114,7 @@
         <v-row class="border-t-thin">
           <v-col cols="12" md="6">
             <p class="text-medium-emphasis text-center">
-              Ready to collaborate? <strong>Call:</strong> +880 1728-493546 · +880 1711-034299
+              Ready to collaborate? <strong>Call:</strong> +880 1515-650818
             </p>
           </v-col>
           <v-col cols="12" md="6">

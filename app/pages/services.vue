@@ -120,7 +120,7 @@
                 class="mr-4"
               >
                 <v-icon
-                  icon="mdi-application-brackets-outline"
+                  icon="mdi-briefcase-outline"
                   size="32"
                   color="white"
                 ></v-icon>
@@ -140,7 +140,7 @@
               >
                 <template v-slot:prepend>
                   <v-icon
-                    icon="mdi-briefcase-outline"
+                    icon="mdi-check-circle"
                     color="success"
                     class="mr-3"
                   ></v-icon>
