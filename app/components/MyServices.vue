@@ -8,7 +8,7 @@
       </v-col>
     </v-row>
     <v-row class="mb-4">
-      <v-col cols="12" md="6" class="mb-4 mb-md-0">
+      <v-col cols="12" md="6" class="mb-4 mb-md-0" v-for="(item, index) in items" :index="index">
         <v-card
           class="service-card"
           elevation="4"
@@ -23,79 +23,17 @@
                 class="mb-4"
               >
                 <v-icon
-                  icon="mdi-store"
+                  :icon="item.icon"
                   size="32"
                   color="white"
                 ></v-icon>
               </v-avatar>
             </template>
             <v-card-title class="text-h5 font-weight-bold mb-3 text-wrap">
-              WooCommerce Store Design
+              {{ item.title }}
             </v-card-title>
             <v-card-text class="text-body-1 text-medium-emphasis">
-              We build modern, fast, and mobile-friendly online stores. A good design helps customers trust you and makes your products look great.
-            </v-card-text>
-          </v-card-item>
-        </v-card>
-      </v-col>
-      
-      <v-col cols="12" md="6">
-        <v-card
-          class="service-card"
-          elevation="4"
-          rounded="lg"
-          height="100%"
-        >
-          <v-card-item class="pa-6">
-            <template v-slot:prepend>
-              <v-avatar
-                color="primary"
-                size="64"
-                class="mb-4"
-              >
-                <v-icon
-                  icon="mdi-bullhorn"
-                  size="32"
-                  color="white"
-                ></v-icon>
-              </v-avatar>
-            </template>
-            <v-card-title class="text-h5 font-weight-bold mb-3 text-wrap">
-              Facebook Ads & Marketing
-            </v-card-title>
-            <v-card-text class="text-body-1 text-medium-emphasis">
-              A beautiful store needs customers. We use targeted Facebook Ads to find the right people for your products and bring them to your website.
-            </v-card-text>
-          </v-card-item>
-        </v-card>
-      </v-col>
-
-      <v-col cols="12" md="6">
-        <v-card
-          class="service-card"
-          elevation="4"
-          rounded="lg"
-          height="100%"
-        >
-          <v-card-item class="pa-6">
-            <template v-slot:prepend>
-              <v-avatar
-                color="primary"
-                size="64"
-                class="mb-4"
-              >
-                <v-icon
-                  icon="mdi-briefcase-outline"
-                  size="32"
-                  color="white"
-                ></v-icon>
-              </v-avatar>
-            </template>
-            <v-card-title class="text-h5 font-weight-bold mb-3 text-wrap">
-              Portfolio Website for Everyone
-            </v-card-title>
-            <v-card-text class="text-body-1 text-medium-emphasis">
-              We create stunning, professional portfolio websites for individuals and businesses to showcase their work and skills effectively.
+              {{ item.text }}
             </v-card-text>
           </v-card-item>
         </v-card>
@@ -107,6 +45,12 @@
 
 <script setup>
 // Services Section Component
+const items= [
+  {id: 1, title: "WooCommerce Store Design", subtitle: "", text: " We build modern, fast, and mobile-friendly online stores. A good design helps customers trust you and makes your products look great.", icon: "mdi-store", status: true },
+  {id: 2, title: "Facebook Ads & Marketing", subtitle: "", text: " A beautiful store needs customers. We use targeted Facebook Ads to find the right people for your products and bring them to your website.", icon: "mdi-bullhorn", status: true },
+  {id: 3, title: "Portfolio Website for Everyone", subtitle: "", text: " We create stunning, professional portfolio websites for individuals and businesses to showcase their work and skills effectively.", icon: "mdi-briefcase-outline", status: true },
+  {id: 4, title: "Landing Page Design", subtitle: "", text: "A great landing page can turn visitors into paying customers.Transform Your Business with a High-Converting Landing Page", icon: "mdi-rocket-launch", status: true },
+]
 </script>
 
 <style scoped>

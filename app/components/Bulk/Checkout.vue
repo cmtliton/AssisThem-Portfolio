@@ -5,7 +5,7 @@
         
         <!-- Header Section -->
         <div class="text-center mb-8 text-white">
-          <h3 class="gradient-text text-overline font-weight-bold mb-2">ORDER NOW!</h3>
+          <h3 class="gradient-text text-overline font-weight-bold mb-1">ORDER NOW!</h3>
           <h1 class="text-h4 text-md-h3 font-weight-bold mb-4">
             Grab Your Micodus MV730 Today
           </h1>
@@ -30,6 +30,7 @@
                 class="mb-2"
                 :rules="[rules.required]"
                 required
+                
               ></v-text-field>
 
               <v-row>
@@ -41,6 +42,7 @@
                     color="primary"
                     :rules="[rules.required, rules.phone]"
                     required
+                    
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12" md="6">
@@ -51,6 +53,7 @@
                     color="primary"
                     type="email"
                     :rules="[rules.email]"
+                    
                   ></v-text-field>
                 </v-col>
               </v-row>
@@ -63,6 +66,7 @@
                 class="mb-6"
                 :rules="[rules.required]"
                 required
+                
               ></v-text-field>
 
               <!-- Shipping Methods -->
@@ -340,9 +344,10 @@ const handlePlaceOrder = async () => {
 .gradient-text {
   background: linear-gradient(90deg, #a855f7, #06b6d4);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: 2px !important;
+  display: inline-block;
+  letter-spacing: 3px !important;
+  font-size: 1rem !important;
 }
 
 /* 
@@ -353,7 +358,7 @@ const handlePlaceOrder = async () => {
 .gradient-border-wrapper {
   position: relative;
   background: linear-gradient(135deg, #a855f7 0%, #3b82f6 50%, #06b6d4 100%);
-  padding: 3px; /* This determines the border thickness */
+  padding: 8px; /* This determines the border thickness */
   border-radius: 10px; /* Match the card radius + padding adjustment */
   width: 100%;
   max-width: 900px;

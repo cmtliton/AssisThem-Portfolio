@@ -4,6 +4,7 @@
      <BulkProductFeatures id="product-details-section"/>
         <BulkCustomerReviews id="reviews-section" @scroll-to-reviews="scrollToReviews"/>
         <BulkVideoShowcase/>
+        <BulkInstallProcess/>
     <BulkCheckout id="checkout-section"/>
     </template>
     <script setup>

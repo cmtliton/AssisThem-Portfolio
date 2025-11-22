@@ -154,6 +154,57 @@
         </v-card>
       </v-col>
     </v-row>
+
+    <v-row class="mt-6">
+      <!-- Landing Page Design Section -->
+      <v-col cols="12">
+        <v-card
+          class="service-section-card"
+          elevation="4"
+          rounded="lg"
+        >
+          <v-card-item class="pa-6">
+            <div class="d-flex align-center mb-4">
+              <v-avatar
+                color="primary"
+                size="64"
+                class="mr-4"
+              >
+                <v-icon
+                  icon="mdi-rocket-launch"
+                  size="32"
+                  color="white"
+                ></v-icon>
+              </v-avatar>
+              <v-card-title class="text-h5 font-weight-bold pa-0 text-wrap">
+                Landing Page Design for Your Services or Products
+              </v-card-title>
+            </div>
+            <p class="text-body-1 mb-4">
+              Transform your business with a high-converting landing page that turns visitors into paying customers. A great landing page can significantly boost your conversion rates and drive sales.
+            </p>
+            <v-list class="pa-0">
+              <v-list-item
+                v-for="(feature, index) in landingPageFeatures"
+                :key="index"
+                class="px-0"
+              >
+                <template v-slot:prepend>
+                  <v-icon
+                    icon="mdi-check-circle"
+                    color="success"
+                    class="mr-3"
+                  ></v-icon>
+                </template>
+                <v-list-item-title class="text-body-1 text-wrap">
+                  {{ feature }}
+                </v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-card-item>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -180,6 +231,15 @@ const portfolioFeatures = [
   'Dark/light friendly UI with accessible color choices',
   'SEO-ready routing, meta tags, and Open Graph previews',
   'Easy CMS/data hookup for dynamic project galleries'
+]
+
+const landingPageFeatures = [
+  'Eye-catching design that captures attention',
+  'Responsive layout optimized for all devices',
+  'Clear call-to-action buttons for maximum conversions',
+  'Fast loading speed for better user experience',
+  'SEO optimized to rank higher in search results',
+  'Integration with analytics and conversion tracking'
 ]
 </script>
 

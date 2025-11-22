@@ -9,6 +9,16 @@
         </div>
       </template>
 
+      <!-- Mobile Menu Button -->
+      <template v-if="$vuetify.display.mdAndDown" #append>
+        <div class="hidden-md-and-up mr-3">
+          <v-app-bar-nav-icon
+            variant="text"
+            @click.stop="drawer = !drawer"
+          ></v-app-bar-nav-icon>
+        </div>
+      </template>
+
       <v-spacer></v-spacer>
 
       <!-- Desktop Menu -->
@@ -21,6 +31,7 @@
           class="text-capitalize bg-cyan-darken-1 text-white mx-2" 
           flat 
           rounded="sm"
+           @click="scrollToCheckout"
         >
           Special Offers
         </v-btn>
@@ -33,7 +44,7 @@
       <template v-slot:append>
         <v-btn 
           rounded="pill" 
-          class="gradient-btn px-6 text-capitalize"
+          class="gradient-btn px-6 text-capitalize d-none d-md-flex"
           color="primary"
           height="45"
           variant="flat"
@@ -43,6 +54,70 @@
         </v-btn>
       </template>
     </v-app-bar>
+
+    <!-- Mobile Navigation Drawer -->
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      location="right"
+      color="black"
+      width="250"
+      class="d-flex d-md-none"
+      expand-on-hover
+    >
+      <v-list
+        nav
+        density="compact"
+        class="pa-4"
+        v-model:opened="open" 
+      >
+        <v-list-item
+          prepend-icon="mdi-home"
+          title="Home"
+          value="home"
+          @click="scrollToHome"
+          class="text-white mb-2"
+        ></v-list-item>
+
+        <v-list-item
+          prepend-icon="mdi-package-variant"
+          title="Product Details"
+          value="product-details"
+          @click="scrollToProductDetails"
+          class="text-white mb-2"
+        ></v-list-item>
+
+        <v-list-item
+          prepend-icon="mdi-tag"
+          title="Special Offers"
+          value="special-offers"
+          class="text-white mb-2 bg-cyan-darken-1 rounded-lg"
+          @click="scrollToCheckout"
+        ></v-list-item>
+
+        <v-list-item
+          prepend-icon="mdi-star"
+          title="Customer Reviews"
+          value="reviews"
+          @click="scrollToReviews"
+          class="text-white mb-2"
+        ></v-list-item>
+
+        <v-divider class="my-4 bg-grey-darken-1"></v-divider>
+
+        <v-btn 
+          rounded="pill" 
+          class="gradient-btn px-6 text-capitalize w-100"
+          color="primary"
+          height="45"
+          variant="flat"
+          @click="scrollToCheckout"
+          block
+        >
+          Contact us
+        </v-btn>
+      </v-list>
+    </v-navigation-drawer>
     <v-main>
         <slot />
     </v-main>
@@ -70,6 +145,13 @@
             }
         });
     }
+    const drawer = ref(false);
+    const group = ref(null);
+    const open = ref([]);
+
+    watch(group, () => {
+    drawer.value = false
+  })
     
     const scrollToHome = () => {
         scrollToSection('hero-section');

@@ -95,7 +95,7 @@
 /* Optional: Add a gradient icon color if you want it to match the header exactly */
 .mdi-cube-scan {
   background: linear-gradient(90deg, #a855f7, #06b6d4);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 </style>
