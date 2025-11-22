@@ -1,2 +1,33 @@
 <template>
+    <BulkHero id="hero-section"/>
+     <BulkOfferMarquee/>
+     <BulkProductFeatures id="product-details-section"/>
+        <BulkCustomerReviews id="reviews-section" @scroll-to-reviews="scrollToReviews"/>
+        <BulkVideoShowcase/>
+    <BulkCheckout id="checkout-section"/>
     </template>
+    <script setup>
+import { nextTick } from 'vue';
+
+// স্ক্রল করার ফাংশন
+definePageMeta({
+  layout: 'custom'
+})
+
+const scrollToReviews = () => {
+  nextTick(() => {
+    const element = document.getElementById('reviews-section');
+    if (element) {
+      // Calculate offset for fixed header (80px height)
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth' // এটি স্মুথলি নিচে নামবে
+      });
+    }
+  });
+}
+</script>
