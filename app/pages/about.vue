@@ -13,8 +13,8 @@
           src="/images/about_us.jpg"
           alt="AssisThem Team"
           cover
-          class="about-image rounded-lg"
-          width="600"
+          class="about-image rounded-lg h-100 w-100"
+          max-width="600"
           height="400"
           format="webp"
           densities="x1"

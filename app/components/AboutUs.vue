@@ -30,7 +30,7 @@ const techStack = [
               border
             >
               <v-img
-                src="/images/about-us.avif"
+                src="/images/about_us.avif"
                 cover
                 height="500"
                 class="align-end"
