@@ -1,14 +1,14 @@
 <template>
-  <v-fade-transition>
+  <v-fade-transition class="mb-16">
+    <!-- v-show এর বদলে v-if অনেক সময় মোবাইলে ভালো কাজ করে -->
     <v-btn
-      v-show="visible"
-      @click="scrollToTop"
-      class="scroll-btn elevation-4"
-      icon="mdi-chevron-up"
+      v-if="visible"
+      @click.stop="scrollToTop"
+      class="scroll-btn elevation-8"
+      icon
       color="white"
-      size="small"
-      position="fixed"
-      location="bottom center"
+      size="50"
+      location="bottom right"
     >
       <v-icon color="grey-darken-3" size="30">mdi-chevron-up</v-icon>
     </v-btn>
@@ -20,14 +20,15 @@ import { ref, onMounted, onUnmounted } from "vue";
 
 const visible = ref(false);
 
-// স্ক্রল পজিশন চেক করার ফাংশন
 const handleScroll = () => {
-  // যদি ৩০০ পিক্সেলের বেশি স্ক্রল হয় তবে বাটনটি দেখাবে
-  visible.value = window.scrollY > 300;
+  // মোবাইলের জন্য পিক্সেল কিছুটা বাড়িয়ে ১০০-২০০ করা ভালো
+  visible.value = window.scrollY > 200;
 };
 
-// স্মুথলি উপরে যাওয়ার ফাংশন
-const scrollToTop = () => {
+const scrollToTop = (e) => {
+  // ইভেন্ট বাবলিং বন্ধ করতে
+  if (e) e.preventDefault();
+
   window.scrollTo({
     top: 0,
     behavior: "smooth",
@@ -35,7 +36,7 @@ const scrollToTop = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll, { passive: true });
 });
 
 onUnmounted(() => {
@@ -45,18 +46,33 @@ onUnmounted(() => {
 
 <style scoped>
 .scroll-btn {
-  bottom: 30px !important;
-  right: 30px !important;
-  z-index: 99;
-  border: 1px solid #eeeeee !important; /* স্ক্রিনশটের মতো হালকা বর্ডার */
-  transition: transform 0.2s ease-in-out !important;
+  position: fixed !important;
+  /* হোয়াটসঅ্যাপ বাটন সাধারণত নিচে থাকে, তাই এটিকে একটু উপরে রাখা হয়েছে */
+  bottom: 100px !important;
+  right: 25px !important;
+  /* সবচেয়ে উপরে রাখার জন্য অনেক বড় z-index */
+  z-index: 99999 !important;
+  border: 1.5px solid #eeeeee !important;
+  /* মোবাইলে ক্লিক এলাকা নিশ্চিত করতে */
+  cursor: pointer;
+  touch-action: manipulation;
 }
 
-.scroll-btn:hover {
-  transform: translateY(-5px); /* হোভারে হালকা উপরে উঠবে */
-  background-color: #f8f8f8 !important;
+/* হোভার ইফেক্ট শুধুমাত্র কম্পিউটারের জন্য */
+@media (min-width: 960px) {
+  .scroll-btn:hover {
+    transform: translateY(-5px);
+    background-color: #f8f8f8 !important;
+  }
 }
 
-/* আপনার ব্র্যান্ড টাচ দিতে চাইলে আইকন কালার পরিবর্তন করতে পারেন */
-/* .v-icon { color: #a855f7 !important; } */
+/* মোবাইলের জন্য পজিশন অ্যাডজাস্টমেন্ট */
+@media (max-width: 600px) {
+  .scroll-btn {
+    bottom: 90px !important; /* হোয়াটসঅ্যাপ বাটনের উপরে থাকবে */
+    right: 20px !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
 </style>

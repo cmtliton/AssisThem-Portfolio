@@ -1,10 +1,11 @@
-npx nuxi@latest module add vuetify-nuxt-module
+//npx nuxi@latest module add vuetify-nuxt-module
 <template>
   <v-app>
     <NavBarByTab />
     <v-main class="mt-n8">
       <nuxt-page></nuxt-page>
     </v-main>
+
     <WhatsappHelpDesk />
     <ScrollToTop />
     <AppFooter />
