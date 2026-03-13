@@ -49,7 +49,7 @@ const portfolioItems = [
     description:
       "Complete store design and marketing solution for a fashion retail business.",
     imageUrl: "/images/boutique_strore.jpg",
-    linkUrl: "https://storekit.pro/templates/stylejunction/",
+    linkUrl: "https://shareelungi.shop/",
   },
   {
     title: "Tech Product Store",

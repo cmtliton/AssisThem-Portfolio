@@ -1,8 +1,8 @@
 <template>
   <MyHero />
+  <MyPortfolio />
   <my-services />
   <why-work-with-us />
-  <MyPortfolio />
   <AboutUs />
 </template>
 <script setup>
