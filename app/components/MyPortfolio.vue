@@ -42,7 +42,7 @@ const portfolioItems = [
     description:
       "Targeted advertising campaign that increased sales by 150% in the first quarter.",
     imageUrl: "/images/campaign_1.jpg",
-    linkUrl: "",
+    linkUrl: "https://mastering-nuxt4.netlify.app/",
   },
   {
     title: "Online Fashion Boutique",
@@ -63,14 +63,14 @@ const portfolioItems = [
     description:
       "Data-driven Facebook Ads strategy that reduced cost per acquisition by 40%.",
     imageUrl: "/images/success_media.jpg",
-    linkUrl: "https://emcfurniture.com/",
+    linkUrl: "https://demo-assisthem.netlify.app/",
   },
   {
     title: "Home Decor Store",
     description:
       "Beautiful online store design with seamless checkout and mobile optimization.",
     imageUrl: "/images/home_decor.jpg",
-    linkUrl: "https://emcfurniture.com/",
+    linkUrl: "https://emcfurniture.netlify.app/",
   },
 ];
 </script>
